@@ -1,3 +1,7 @@
-a = int(input("gave a number: "))
-b = int(input("gave a number: "))
-print(a+b)
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Backend running"}
